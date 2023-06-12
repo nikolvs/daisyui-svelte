@@ -1,4 +1,3 @@
-export type NavbarProps = HTMLAttributes<HTMLDivElement> & {
-  className: string;
-  dataTheme: string;
-}
+import type { CoreProps } from "$lib/internal/types";
+
+export type NavbarProps = CoreProps<HTMLDivElement>;
