@@ -4,11 +4,16 @@
 
 	type $$Props = NavbarProps;
 
-	export let dataTheme: string;
-	export let className: string;
+	export let className: $$Props['className'] = '';
 	export { className as class };
+
+	const attrs = {
+		role: 'navigation',
+		'aria-label': 'Navbar',
+		...$$restProps
+	};
 </script>
 
-<div class={twMerge('navbar', className)} data-theme={dataTheme} {...$$restProps}>
+<div class={twMerge('navbar', className)} {...attrs}>
 	<slot />
 </div>

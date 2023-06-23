@@ -1,2 +1,3 @@
 export { default as Navbar } from './Navbar.svelte';
-export type { NavbarProps } from './Navbar.js';
+export { default as NavbarSection } from './NavbarSection.svelte';
+export type * from './Navbar.js';

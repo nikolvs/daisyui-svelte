@@ -1,7 +1,9 @@
 <script>
 	import '../app.css';
-	import { Navbar } from '@nikolvs/daisyui-svelte';
+	import { Navbar, NavbarSection, version } from '@nikolvs/daisyui-svelte';
 </script>
 
-<Navbar class="bg-primary">daisyUI Svelte</Navbar>
+<Navbar data-theme="dark">
+	<NavbarSection section="start">daisyUI Svelte {version}</NavbarSection>
+</Navbar>
 <slot />
