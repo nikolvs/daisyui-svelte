@@ -5,7 +5,8 @@ import type {
   ComponentShape
 } from "$lib/internal/types";
 
-export type ButtonProps = ComponentBaseProps<HTMLDivElement> & {
+export type ButtonProps = ComponentBaseProps<HTMLButtonElement> & {
+  href?: string
   size?: ComponentSize
   color?: ComponentColor
   shape?: ComponentShape
@@ -14,5 +15,6 @@ export type ButtonProps = ComponentBaseProps<HTMLDivElement> & {
   disabled?: boolean
   animation?: boolean
   fullWidth?: boolean
+  loading?: boolean
   variant?: 'outline' | 'link'
 };
