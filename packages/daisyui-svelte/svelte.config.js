@@ -1,5 +1,5 @@
 import { vitePreprocess } from '@sveltejs/kit/vite';
-import delegateEvents from "svelte-preprocess-delegate-events/preprocess";
+import delegateEvents from 'svelte-preprocess-delegate-events/preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

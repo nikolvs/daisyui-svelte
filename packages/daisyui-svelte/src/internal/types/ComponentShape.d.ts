@@ -1,3 +1,1 @@
-export type ComponentShape =
-  | 'circle'
-  | 'square'
+export type ComponentShape = 'circle' | 'square';

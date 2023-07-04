@@ -2,11 +2,11 @@
 	import { clsx } from 'clsx';
 	import type { ButtonProps } from './Button.js';
 	import { twMerge } from 'tailwind-merge';
-  import { Loading } from '$lib/components'
+	import { Loading } from '$lib/components';
 
 	type $$Props = ButtonProps;
 
-  export let href: $$Props['href'];
+	export let href: $$Props['href'];
 	export let size: $$Props['size'];
 	export let color: $$Props['color'];
 	export let shape: $$Props['shape'];
@@ -23,7 +23,7 @@
 	const classes = twMerge(
 		'btn',
 		clsx({
-      'gap-2': ($$slots.startIcon && !loading) || $$slots.endIcon,
+			'gap-2': ($$slots.startIcon && !loading) || $$slots.endIcon,
 			'btn-lg': size === 'lg',
 			'btn-md': size === 'md',
 			'btn-sm': size === 'sm',
@@ -53,20 +53,20 @@
 </script>
 
 {#if href}
-  <a {href} class={classes} {...$$restProps} on:*>
-    <slot name="startIcon" />
-    <slot />
-    <slot name="endIcon" />
-  </a>
+	<a {href} class={classes} {...$$restProps} on:*>
+		<slot name="startIcon" />
+		<slot />
+		<slot name="endIcon" />
+	</a>
 {:else}
-  <button class={classes} {...$$restProps} on:*>
-    {#if loading}
-      <Loading {size} />
-    {:else}
-      <slot name="startIcon" />
-    {/if}
+	<button class={classes} {...$$restProps} on:*>
+		{#if loading}
+			<Loading {size} />
+		{:else}
+			<slot name="startIcon" />
+		{/if}
 
-    <slot />
-    <slot name="endIcon" />
-  </button>
+		<slot />
+		<slot name="endIcon" />
+	</button>
 {/if}
