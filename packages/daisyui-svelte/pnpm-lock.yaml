@@ -50,6 +50,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.0.1
     version: 3.4.3(postcss@8.4.24)(svelte@3.59.1)
+  svelte-preprocess-delegate-events:
+    specifier: ^0.4.1
+    version: 0.4.1
   tailwind-merge:
     specifier: ^1.13.1
     version: 1.13.1
@@ -1993,6 +1996,23 @@ packages:
       svelte: ^3.19.0 || ^4.0.0-next.0
     dependencies:
       svelte: 3.59.1
+    dev: true
+
+  /svelte-parse-markup@0.1.2(svelte@3.59.1):
+    resolution: {integrity: sha512-DycY7DJr7VqofiJ63ut1/NEG92HrWWL56VWITn/cJCu+LlZhMoBkBXT4opUitPEEwbq1nMQbv4vTKUfbOqIW1g==}
+    peerDependencies:
+      svelte: ^3.0.0 || ^4.0.0
+    dependencies:
+      svelte: 3.59.1
+    dev: true
+
+  /svelte-preprocess-delegate-events@0.4.1:
+    resolution: {integrity: sha512-KQA+/sqA6NA/CAkm8MHHQl2/SU+ItB0vitOBHjUU4lgLnTTbDLbJVBJhRdoqhKaAfRjfemxV9gsfZDIlcI/wiA==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      magic-string: 0.30.0
+      svelte: 3.59.1
+      svelte-parse-markup: 0.1.2(svelte@3.59.1)
     dev: true
 
   /svelte-preprocess@5.0.4(postcss@8.4.24)(svelte@3.59.1)(typescript@5.1.3):

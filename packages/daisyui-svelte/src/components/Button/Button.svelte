@@ -11,9 +11,9 @@
 	export let wide: $$Props['wide'];
 	export let glass: $$Props['glass'];
 	export let variant: $$Props['variant'];
+	export let disabled: $$Props['disabled'];
 	export let fullWidth: $$Props['fullWidth'];
 	export let animation: $$Props['animation'] = true;
-	export let disabled: $$Props['disabled'] = false;
 	export let className: $$Props['className'];
 	export { className as class };
 
@@ -48,6 +48,6 @@
 	);
 </script>
 
-<button class={classes} {...$$restProps}>
+<button class={classes} {...$$restProps} on:*>
 	<slot />
 </button>
