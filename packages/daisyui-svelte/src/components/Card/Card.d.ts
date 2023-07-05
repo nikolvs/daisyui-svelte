@@ -13,3 +13,4 @@ export type CardTitleProps = ComponentBaseProps & {
 };
 
 export type CardBodyProps = ComponentBaseProps<HTMLDivElement>;
+export type CardActionsProps = ComponentBaseProps<HTMLDivElement>;
