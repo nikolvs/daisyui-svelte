@@ -4,7 +4,7 @@
 
 	type $$Props = NavbarProps;
 
-	export let className: $$Props['className'];
+	export let className: $$Props['className'] = '';
 	export { className as class };
 
 	const attrs = {

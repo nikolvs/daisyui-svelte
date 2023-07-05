@@ -6,11 +6,11 @@
 	type $$Props = CardProps;
 
 	export let bordered: $$Props['bordered'] = true;
-	export let imageFull: $$Props['imageFull'];
-	export let normal: $$Props['normal'];
-	export let compact: $$Props['compact'];
-	export let side: $$Props['side'];
-	export let className: $$Props['className'];
+	export let imageFull: $$Props['imageFull'] = false;
+	export let normal: $$Props['normal'] = false;
+	export let compact: $$Props['compact'] = false;
+	export let side: $$Props['side'] = false;
+	export let className: $$Props['className'] = '';
 	export { className as class };
 
 	type ResponsiveModifierMap = {

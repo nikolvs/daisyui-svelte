@@ -5,10 +5,10 @@
 
 	type $$Props = LoadingProps;
 
-	export let size: $$Props['size'];
-	export let color: $$Props['color'];
-	export let variant: $$Props['variant'];
-	export let className: $$Props['className'];
+	export let size: $$Props['size'] = null;
+	export let color: $$Props['color'] = null;
+	export let variant: $$Props['variant'] = null;
+	export let className: $$Props['className'] = '';
 	export { className as class };
 
 	const classes = twMerge(

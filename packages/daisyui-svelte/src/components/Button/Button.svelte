@@ -6,18 +6,18 @@
 
 	type $$Props = ButtonProps;
 
-	export let href: $$Props['href'];
-	export let size: $$Props['size'];
-	export let color: $$Props['color'];
-	export let shape: $$Props['shape'];
-	export let wide: $$Props['wide'];
-	export let glass: $$Props['glass'];
-	export let variant: $$Props['variant'];
-	export let disabled: $$Props['disabled'];
-	export let fullWidth: $$Props['fullWidth'];
-	export let loading: $$Props['loading'];
+	export let href: $$Props['href'] = '';
+	export let size: $$Props['size'] = null;
+	export let color: $$Props['color'] = null;
+	export let shape: $$Props['shape'] = null;
+	export let variant: $$Props['variant'] = null;
+	export let wide: $$Props['wide'] = false;
+	export let glass: $$Props['glass'] = false;
+	export let loading: $$Props['loading'] = false;
+	export let disabled: $$Props['disabled'] = false;
+	export let fullWidth: $$Props['fullWidth'] = false;
 	export let animation: $$Props['animation'] = true;
-	export let className: $$Props['className'];
+	export let className: $$Props['className'] = '';
 	export { className as class };
 
 	const classes = twMerge(
