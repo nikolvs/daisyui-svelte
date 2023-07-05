@@ -7,3 +7,7 @@ export type CardProps = ComponentBaseProps<HTMLDivElement> & {
 	compact?: ComponentSize | boolean;
 	side?: ComponentSize | boolean;
 };
+
+export type CardTitleProps = ComponentBaseProps & {
+	tag?: keyof HTMLElementTagNameMap;
+};
