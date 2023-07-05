@@ -46,7 +46,7 @@
 			'no-animation': !animation,
 			'btn-active': !disabled,
 			'btn-disabled': disabled,
-			glass: glass
+			glass
 		}),
 		className
 	);

@@ -6,7 +6,7 @@
 	type $$Props = NavbarSectionProps;
 
 	export let section: $$Props['section'];
-	export let className: $$Props['className'] = '';
+	export let className: $$Props['className'];
 	export { className as class };
 
 	const classes = twMerge(
