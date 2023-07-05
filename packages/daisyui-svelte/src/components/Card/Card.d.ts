@@ -11,3 +11,5 @@ export type CardProps = ComponentBaseProps<HTMLDivElement> & {
 export type CardTitleProps = ComponentBaseProps & {
 	tag?: keyof HTMLElementTagNameMap;
 };
+
+export type CardBodyProps = ComponentBaseProps<HTMLDivElement>;
