@@ -8,6 +8,6 @@
 	export { className as class };
 </script>
 
-<div class={twMerge('card-actions', className)} {...$$restProps}>
+<div class={twMerge('card-actions', className)} {...$$restProps} on:*>
 	<slot />
 </div>

@@ -9,6 +9,6 @@
 	export { className as class };
 </script>
 
-<svelte:element this={tag} class={twMerge('card-title', className)} {...$$restProps}>
+<svelte:element this={tag} class={twMerge('card-title', className)} {...$$restProps} on:*>
 	<slot />
 </svelte:element>

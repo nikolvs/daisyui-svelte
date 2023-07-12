@@ -61,6 +61,6 @@
 	};
 </script>
 
-<div class={classes} {...attrs}>
+<div class={classes} {...attrs} on:*>
 	<slot />
 </div>

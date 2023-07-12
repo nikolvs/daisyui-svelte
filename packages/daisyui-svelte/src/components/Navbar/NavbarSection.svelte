@@ -19,6 +19,6 @@
 	);
 </script>
 
-<div class={classes} {...$$restProps}>
+<div class={classes} {...$$restProps} on:*>
 	<slot />
 </div>

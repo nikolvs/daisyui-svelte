@@ -14,6 +14,6 @@
 	};
 </script>
 
-<div class={twMerge('navbar', className)} {...attrs}>
+<div class={twMerge('navbar', className)} {...attrs} on:*>
 	<slot />
 </div>

@@ -10,5 +10,5 @@
 </script>
 
 <figure>
-	<img class={twMerge(className)} {alt} {...$$restProps} />
+	<img class={twMerge(className)} {alt} {...$$restProps} on:* />
 </figure>

@@ -37,4 +37,4 @@
 	);
 </script>
 
-<span class={classes} {...$$restProps} />
+<span class={classes} {...$$restProps} on:* />
