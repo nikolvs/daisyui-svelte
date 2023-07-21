@@ -1,5 +1,6 @@
 {
 	"name": "@nikolvs/daisyui-svelte",
+	"author": "Nikolas Silva <npm@nkls.dev>",
 	"version": "0.1.2",
 	"license": "MIT",
 	"scripts": {
@@ -55,5 +56,20 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nikolvs/daisyui-svelte.git",
+		"directory": "packages/daisyui-svelte"
+	},
+	"keywords": [
+		"svelte",
+		"svelte3",
+		"daisyui",
+		"tailwind",
+		"tailwindcss",
+		"ui",
+		"components",
+		"framework"
+	]
 }
