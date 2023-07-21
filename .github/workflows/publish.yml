@@ -6,8 +6,8 @@ on:
       - "main"
 
 jobs:
-  bump-version:
-    name: "Bump version"
+  bump-version-and-publish:
+    name: "Bump version and publish to NPM"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,3 +30,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGEJSON_DIR: "packages/daisyui-svelte"
+
+      - name: "Publish daisyui-svelte package to NPM"
+        if: steps.version-bump.outcome == 'success'
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          package: packages/daisyui-svelte
+          token: ${{ secrets.NPM_TOKEN }}
