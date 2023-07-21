@@ -39,7 +39,7 @@ jobs:
           npm run package
 
       - name: "Publish daisyui-svelte package to NPM"
-        if: steps.version-bump.outcome == 'success'
+        if: steps.create-package.outcome == 'success'
         uses: JS-DevTools/npm-publish@v2
         with:
           package: packages/daisyui-svelte
