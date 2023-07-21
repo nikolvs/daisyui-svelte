@@ -35,6 +35,7 @@ jobs:
         if: steps.version-bump.outcome == 'success'
         id: create-package
         run: |
+          cd packages/daisyui-svelte
           npm install
           npm run package
 
