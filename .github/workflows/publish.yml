@@ -36,4 +36,5 @@ jobs:
         uses: JS-DevTools/npm-publish@v2
         with:
           package: packages/daisyui-svelte
+          access: public
           token: ${{ secrets.NPM_TOKEN }}
