@@ -13,19 +13,20 @@ jobs:
       contents: write
 
     steps:
-      - name: "Checkout source code"
-        uses: "actions/checkout@v2"
+      - uses: actions/checkout@v3
+      - uses: dorny/paths-filter@v2
+        id: filter
         with:
-          ref: ${{ github.ref }}
-      - name: "Automated version bump"
+          filters: |
+            daisyui-svelte:
+              - 'packages/daisyui-svelte/**'
+
+      - name: "Bump daisyui-svelte package version"
+        if: steps.filter.outputs.daisyui-svelte == 'true'
         id: version-bump
         uses: "phips28/gh-action-bump-version@master"
         with:
-          tag-prefix: "v"
+          skip-tag: "true"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGEJSON_DIR: "packages/daisyui-svelte"
-      - name: "Output step"
-        env:
-          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
-        run: echo "new tag $NEW_TAG"
