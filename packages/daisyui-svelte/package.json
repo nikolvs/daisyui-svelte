@@ -1,6 +1,7 @@
 {
 	"name": "@nikolvs/daisyui-svelte",
 	"version": "0.1.0",
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
