@@ -31,6 +31,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PACKAGEJSON_DIR: "packages/daisyui-svelte"
 
+      - name: "Create package"
+        if: steps.version-bump.outcome == 'success'
+        id: create-package
+        run: |
+          npm install
+          npm run package
+
       - name: "Publish daisyui-svelte package to NPM"
         if: steps.version-bump.outcome == 'success'
         uses: JS-DevTools/npm-publish@v2
